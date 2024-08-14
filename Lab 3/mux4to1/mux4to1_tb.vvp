@@ -1,0 +1,160 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x56090c705410 .scope module, "mux4to1_tb" "mux4to1_tb" 2 3;
+ .timescale -9 -9;
+v0x56090c71ea40_0 .net "f", 0 0, v0x56090c71df20_0;  1 drivers
+v0x56090c71eb00_0 .var/i "i", 31 0;
+v0x56090c71ebe0_0 .var "s1", 0 0;
+v0x56090c71ec80_0 .var "s2", 0 0;
+v0x56090c71ed70_0 .var "x1", 0 0;
+v0x56090c71eeb0_0 .var "x2", 0 0;
+v0x56090c71efa0_0 .var "x3", 0 0;
+v0x56090c71f090_0 .var "x4", 0 0;
+S_0x56090c7055a0 .scope module, "func" "mux4to1" 2 7, 3 2 0, S_0x56090c705410;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "w0";
+    .port_info 1 /INPUT 1 "w1";
+    .port_info 2 /INPUT 1 "w2";
+    .port_info 3 /INPUT 1 "w3";
+    .port_info 4 /INPUT 1 "s0";
+    .port_info 5 /INPUT 1 "s1";
+    .port_info 6 /OUTPUT 1 "f";
+v0x56090c71e2e0_0 .net "f", 0 0, v0x56090c71df20_0;  alias, 1 drivers
+v0x56090c71e3a0_0 .net "s0", 0 0, v0x56090c71ebe0_0;  1 drivers
+v0x56090c71e490_0 .net "s1", 0 0, v0x56090c71ec80_0;  1 drivers
+v0x56090c71e560_0 .net "t1", 0 0, v0x56090c707cf0_0;  1 drivers
+v0x56090c71e650_0 .net "t2", 0 0, v0x56090c71d8b0_0;  1 drivers
+v0x56090c71e790_0 .net "w0", 0 0, v0x56090c71ed70_0;  1 drivers
+v0x56090c71e830_0 .net "w1", 0 0, v0x56090c71eeb0_0;  1 drivers
+v0x56090c71e8d0_0 .net "w2", 0 0, v0x56090c71efa0_0;  1 drivers
+v0x56090c71e970_0 .net "w3", 0 0, v0x56090c71f090_0;  1 drivers
+S_0x56090c707aa0 .scope module, "func" "mux2to1" 3 6, 4 1 0, S_0x56090c7055a0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "w0";
+    .port_info 1 /INPUT 1 "w1";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "f";
+v0x56090c707cf0_0 .var "f", 0 0;
+v0x56090c71d320_0 .net "s", 0 0, v0x56090c71ebe0_0;  alias, 1 drivers
+v0x56090c71d3e0_0 .net "w0", 0 0, v0x56090c71ed70_0;  alias, 1 drivers
+v0x56090c71d4b0_0 .net "w1", 0 0, v0x56090c71eeb0_0;  alias, 1 drivers
+E_0x56090c704b80 .event edge, v0x56090c71d320_0, v0x56090c71d4b0_0, v0x56090c71d3e0_0;
+S_0x56090c71d620 .scope module, "func2" "mux2to1" 3 7, 4 1 0, S_0x56090c7055a0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "w0";
+    .port_info 1 /INPUT 1 "w1";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "f";
+v0x56090c71d8b0_0 .var "f", 0 0;
+v0x56090c71d990_0 .net "s", 0 0, v0x56090c71ebe0_0;  alias, 1 drivers
+v0x56090c71da80_0 .net "w0", 0 0, v0x56090c71efa0_0;  alias, 1 drivers
+v0x56090c71db50_0 .net "w1", 0 0, v0x56090c71f090_0;  alias, 1 drivers
+E_0x56090c6cc8a0 .event edge, v0x56090c71d320_0, v0x56090c71db50_0, v0x56090c71da80_0;
+S_0x56090c71dc80 .scope module, "func3" "mux2to1" 3 8, 4 1 0, S_0x56090c7055a0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "w0";
+    .port_info 1 /INPUT 1 "w1";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "f";
+v0x56090c71df20_0 .var "f", 0 0;
+v0x56090c71e000_0 .net "s", 0 0, v0x56090c71ec80_0;  alias, 1 drivers
+v0x56090c71e0c0_0 .net "w0", 0 0, v0x56090c707cf0_0;  alias, 1 drivers
+v0x56090c71e1c0_0 .net "w1", 0 0, v0x56090c71d8b0_0;  alias, 1 drivers
+E_0x56090c6cc5e0 .event edge, v0x56090c71e000_0, v0x56090c71d8b0_0, v0x56090c707cf0_0;
+    .scope S_0x56090c707aa0;
+T_0 ;
+    %wait E_0x56090c704b80;
+    %load/vec4 v0x56090c71d320_0;
+    %flag_set/vec4 8;
+    %jmp/0 T_0.0, 8;
+    %load/vec4 v0x56090c71d4b0_0;
+    %jmp/1 T_0.1, 8;
+T_0.0 ; End of true expr.
+    %load/vec4 v0x56090c71d3e0_0;
+    %jmp/0 T_0.1, 8;
+ ; End of false expr.
+    %blend;
+T_0.1;
+    %store/vec4 v0x56090c707cf0_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0x56090c71d620;
+T_1 ;
+    %wait E_0x56090c6cc8a0;
+    %load/vec4 v0x56090c71d990_0;
+    %flag_set/vec4 8;
+    %jmp/0 T_1.0, 8;
+    %load/vec4 v0x56090c71db50_0;
+    %jmp/1 T_1.1, 8;
+T_1.0 ; End of true expr.
+    %load/vec4 v0x56090c71da80_0;
+    %jmp/0 T_1.1, 8;
+ ; End of false expr.
+    %blend;
+T_1.1;
+    %store/vec4 v0x56090c71d8b0_0, 0, 1;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0x56090c71dc80;
+T_2 ;
+    %wait E_0x56090c6cc5e0;
+    %load/vec4 v0x56090c71e000_0;
+    %flag_set/vec4 8;
+    %jmp/0 T_2.0, 8;
+    %load/vec4 v0x56090c71e1c0_0;
+    %jmp/1 T_2.1, 8;
+T_2.0 ; End of true expr.
+    %load/vec4 v0x56090c71e0c0_0;
+    %jmp/0 T_2.1, 8;
+ ; End of false expr.
+    %blend;
+T_2.1;
+    %store/vec4 v0x56090c71df20_0, 0, 1;
+    %jmp T_2;
+    .thread T_2, $push;
+    .scope S_0x56090c705410;
+T_3 ;
+    %vpi_call 2 10 "$dumpfile", "mux4to1_tb.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x56090c705410 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x56090c71eb00_0, 0, 32;
+T_3.0 ;
+    %load/vec4 v0x56090c71eb00_0;
+    %cmpi/s 64, 0, 32;
+    %jmp/0xz T_3.1, 5;
+    %load/vec4 v0x56090c71eb00_0;
+    %pad/s 6;
+    %split/vec4 1;
+    %store/vec4 v0x56090c71f090_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x56090c71efa0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x56090c71eeb0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x56090c71ed70_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x56090c71ec80_0, 0, 1;
+    %store/vec4 v0x56090c71ebe0_0, 0, 1;
+    %delay 20, 0;
+    %load/vec4 v0x56090c71eb00_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x56090c71eb00_0, 0, 32;
+    %jmp T_3.0;
+T_3.1 ;
+    %vpi_call 2 15 "$display", "test complete" {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "mux4to1_tb.v";
+    "./mux4to1.v";
+    "./mux2to1.v";
