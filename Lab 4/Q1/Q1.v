@@ -6,7 +6,7 @@ module Q1(W, Y, En);
 	always @(W or En)
 		for (k = 0; k <= 3; k = k+1)
 			if ((W == k) && (En == 0))
-				Y[k] = 0;
-			else
 				Y[k] = 1;
+			else
+				Y[k] = 0;
 endmodule
