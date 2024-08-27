@@ -1,18 +1,19 @@
-`timescale 1ns/1ns
-`include "Q4.v"
-module Q4_tb();
-    reg [15:0]in;
-    wire [3:0]out;
-    wire valid;
+module Q4 (
+    input  [15:0] in,
+    output reg [3:0] out,
+    output reg valid
+);
     integer i;
-    Q4 func(in, out, valid);
-    initial
-    begin
-        $dumpfile("Q4_tb.vcd");
-        $dumpvars(0, Q4_tb);
-        for (i = 0; i < 65536; i = i + 1) begin
-            in = i; #10;
+    
+    always @(*) begin
+        valid = 1'b0;
+        out = 4'b0000;
+        for (i = 15; i >= 0; i = i - 1) begin
+            if (in[i] == 1'b1) begin
+                out = i;
+                valid = 1'b1;
+                i = -1;
+            end
         end
-        $display("Test complete");
     end
 endmodule
